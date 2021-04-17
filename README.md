@@ -14,3 +14,6 @@ https://www.techwasti.com/how-to-use-requestparam-annotation-in-spring-boot-cont
 
 Spring boot with twilio to make a voice call and digitalise the call center.
 https://medium.com/techwasti/spring-boot-twilio-to-enhance-customer-experience-5818873ca062
+
+Spring Boot with mongoDB+ graphql and Spring Data example.
+https://wp.me/pbgB2u-9U
