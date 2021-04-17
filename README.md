@@ -17,3 +17,6 @@ https://medium.com/techwasti/spring-boot-twilio-to-enhance-customer-experience-5
 
 Spring Boot with mongoDB+ graphql and Spring Data example.
 https://wp.me/pbgB2u-9U
+
+Spring boot+ thymeleaf email template to sed emails.
+https://www.techwasti.com/springboot-sends-emails-using-the-thymeleaf-template-engine/
