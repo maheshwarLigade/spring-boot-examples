@@ -1,0 +1,34 @@
+type Teacher {
+	id: ID!
+	name: String!
+	age: Int
+}
+
+# Root
+type Query {
+	findAllTeachers: [Teacher]!
+	countTeachers: Long!
+}
+
+# Root
+type Mutation {
+	createTeacher(name: String!, age: Int): Teacher!
+}
+
+type Subject {
+	id: ID!
+	title: String!
+	description: String
+	teacher: Teacher
+}
+
+extend type Query {
+	findAllSubjects: [Subject]!
+	countSubjects: Long!
+}
+
+extend type Mutation {
+	createSubject(title: String!, description: String, teacher: ID!): Subject!
+	updateSubject(id: ID!, title: String, description: String): Subject!
+	deleteSubject(id: ID!): Boolean
+}
