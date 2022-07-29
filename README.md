@@ -2,6 +2,7 @@
 spring boot sample examples and tutorials
 
 To get tutorials about this code please visit blog https://medium.com/techwasti
+https://techwasti.com/series/spring-boot-tutorials
 
 Spring-Boot Thymeleaf Hello World Example visit below blog post.
 https://medium.com/techwasti/spring-boot-thymeleaf-hello-world-example-11bc00bb22b4
@@ -20,3 +21,5 @@ https://wp.me/pbgB2u-9U
 
 Spring boot+ thymeleaf email template to sed emails.
 https://www.techwasti.com/springboot-sends-emails-using-the-thymeleaf-template-engine/
+
+
