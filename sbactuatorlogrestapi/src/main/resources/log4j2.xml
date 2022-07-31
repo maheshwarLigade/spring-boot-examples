@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!-- Extra logging related to initialization of Log4j.
+ Set to debug or trace if log4j initialization is failing. -->
+<Configuration status="warn">
+    <properties>
+        <property name="LOGS" value="./logs"/>
+    </properties>
+    <Appenders>
+        <!-- Console appender configuration -->
+        <Console name="console" target="SYSTEM_OUT">
+            <PatternLayout
+                    pattern="%d{yyyy-MM-dd HH:mm:ss} %-5p %c{1}:%L - %m%n"/>
+        </Console>
+        <!--                     filePattern="${LOGS}/spring-boot-logger-%d{yyyy-MM-dd}.log"-->
+       <RollingFile name="fileLogger"
+             fileName="${LOGS}/spring-boot-logger.log"
+             filePattern="${LOGS}/spring-boot-logger-%d{yyyy-MM-dd}-%i.log">
+    <PatternLayout pattern="%d [%t] %-5p {%F:%L} %x - %m%n"/>
+    <Policies>
+        <TimeBasedTriggeringPolicy interval="1"/>
+    </Policies>
+    <DefaultRolloverStrategy>
+        <Delete basePath="${LOGS}" maxDepth="10">
+            <IfLastModified age="2d"/>
+        </Delete>
+    </DefaultRolloverStrategy>
+</RollingFile>
+    </Appenders>
+    <Loggers>
+        <!-- Root logger referring to console appender -->
+        <Root level="info" additivity="false">
+            <AppenderRef ref="console"/>
+            <appenderRef ref="fileLogger"/>
+        </Root>
+    </Loggers>
+</Configuration>
